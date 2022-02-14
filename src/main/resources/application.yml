@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    host: localhost
+    port: 5433
+    database: asi
+    username: asi
+    password: asi
+    url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}
+    sql-script-encoding: UTF-8
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    initialization-mode: always
+    continue-on-error: false
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+logging:
+  pattern:
+    console: "%d{yyyy-MMM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %n"
+  level:
+   root: INFO
+   com.example.demo: DEBUG
+properties:
+  clientHost: http://localhost:1234
+  jwtSecretKey: sdfgsdgsdfgsdfgdsfgdfgsdfgsdgsdf
+  jwtValidity: 7200
+  imagesPath: C:\\Users\\Public\\Pictures\\asi\\
